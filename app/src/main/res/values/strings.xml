@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Keto1</string>
+    <string name="StartW">Start Weight</string>
+    <string name="CurrentWeight">Current Weight</string>
+    <string name="StartDate">Start Date</string>
+    <string name="StartDateValue">Start Date Value</string>
+    <string name="GoalWeight">Goal Weight Value</string>
+    <string name="GoalWeightNV">Goal Weight</string>
+    <string name="GoalDate">Goal Date</string>
+    <string name="GoalDateValue">Goal Date Value</string>
+    <string name="Submit">Submit</string>
+    <string name="Goals">Goals for each week:</string>
+    <string name="Mondays">dateAndWeight</string>
+</resources>
