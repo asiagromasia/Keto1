@@ -15,12 +15,12 @@
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
         android:text="@string/StartW"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText3"
-        app:layout_constraintEnd_toStartOf="@+id/editText3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextCurrentWeight"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCurrentWeight"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editTextCurrentWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="71dp"
@@ -45,13 +45,13 @@
         android:layout_marginRight="36dp"
         android:layout_marginBottom="67dp"
         android:text="@string/GoalWeightNV"
-        app:layout_constraintBottom_toBottomOf="@+id/editText2"
-        app:layout_constraintEnd_toStartOf="@+id/editText4"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextGoalDate"
+        app:layout_constraintEnd_toStartOf="@+id/editTextGoalWeight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/editTextGoalWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
@@ -63,10 +63,10 @@
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextStartDate" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextStartDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -78,10 +78,10 @@
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCurrentWeight" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editTextGoalDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
@@ -93,7 +93,7 @@
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextGoalWeight" />
 
     <TextView
         android:id="@+id/textView5"
@@ -104,8 +104,8 @@
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:text="@string/StartDate"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextStartDate"
+        app:layout_constraintEnd_toStartOf="@+id/editTextStartDate"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -119,8 +119,8 @@
         android:layout_marginRight="36dp"
         android:layout_marginBottom="11dp"
         android:text="@string/GoalDate"
-        app:layout_constraintBottom_toBottomOf="@+id/editText2"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextGoalDate"
+        app:layout_constraintEnd_toStartOf="@+id/editTextGoalDate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -134,5 +134,5 @@
         android:onClick="pressSubmit"
         android:text="@string/Submit"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextGoalDate" />
 </androidx.constraintlayout.widget.ConstraintLayout>
