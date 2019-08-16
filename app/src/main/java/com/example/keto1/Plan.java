@@ -24,7 +24,7 @@ public class Plan<n, p> extends AppCompatActivity {
     int currentWeight;
     int goalWeight;
 
-    private TextView selectedWeeks;
+    private static TextView selectedWeeks;
     private TextView need;
     private TextView total;
    
@@ -54,17 +54,19 @@ public class Plan<n, p> extends AppCompatActivity {
         Integer goalDate = intent.getIntExtra("goalDate", 0);*/
 
 
-        selectedWeeks.setText(String(k));
-        need.setText(Integer.toString(p));
-        total.setText(Integer.toString(t));
+      //  selectedWeeks.setText("You have selected " + weeks + " weeks");
+        int g = currentWeight - goalWeight;
+        need.setText("You need " + g + " weeks to loose desired weight.");
+
+        //total.setText("On this Monday " + d + " your weight should be " + w + "lbn");
 
 
         //  }
 
-       // LocalDate localDate1 = LocalDate.parse(Integer.toString(startDate));
-      // LocalDate localDate2 = LocalDate.parse(Integer.toString(goalDate));
+          // LocalDate localDate1 = LocalDate.parse(Integer.toString(startDate));
+         // LocalDate localDate2 = LocalDate.parse(Integer.toString(goalDate));
         // LocalDate localDate1 = LocalDate.parse(startDate);
-        //LocalDate localDate2 = LocalDate.parse(goalDate);
+        // LocalDate localDate2 = LocalDate.parse(goalDate);
 
         List<LocalDate> dates = getMondayDates(LocalDate.parse(Integer.toString(startDate)), LocalDate.parse(Integer.toString(goalDate)));
         //List<LocalDate> dates = getMondayDates(LocalDate.of(2019, Month.JULY, 31), LocalDate.of(2019, Month.NOVEMBER, 30));
@@ -75,8 +77,6 @@ public class Plan<n, p> extends AppCompatActivity {
 
         List<Integer> weight = new ArrayList<Integer>();
 
-        int g = currentWeight - goalWeight;
-        String p = "You need " + g + " weeks to loose desired weight.";
 
         for (int i = currentWeight; i > goalWeight; i--) {
             weight.add(i);
@@ -89,8 +89,8 @@ public class Plan<n, p> extends AppCompatActivity {
             //if (dates.size() >= weight.size()){
             LocalDate d = dates.get(n);
             Integer w = weight.get(n);
-            System.out.println("On this Monday " + d + " your weight should be " + w + "lbn");
-          String  t = "On this Monday " + d + " your weight should be " + w + "lbn";
+            total.setText("On this Monday " + d + " your weight should be " + w + "lbn");
+
         }
 
     }
@@ -107,8 +107,7 @@ public class Plan<n, p> extends AppCompatActivity {
         }
         //    System.out.print("Together: "+ result);
         long weeks = ChronoUnit.WEEKS.between(startDate, goalDate);
-        System.out.println("You have selected " + weeks + " weeks");
-        String  k = "You have selected " + weeks + " weeks";
+        selectedWeeks.setText("You have selected " + weeks + " weeks");
         return result;
     }
 
